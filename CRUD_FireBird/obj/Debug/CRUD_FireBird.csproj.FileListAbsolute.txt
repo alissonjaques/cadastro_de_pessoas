@@ -1,0 +1,13 @@
+C:\Users\ALISSON JAQUES\Downloads\CadastroDePessoas\CadastroDePessoas\bin\Debug\CadastroDePessoas.exe.config
+C:\Users\ALISSON JAQUES\Downloads\CadastroDePessoas\CadastroDePessoas\bin\Debug\CadastroDePessoas.exe
+C:\Users\ALISSON JAQUES\Downloads\CadastroDePessoas\CadastroDePessoas\bin\Debug\CadastroDePessoas.pdb
+C:\Users\ALISSON JAQUES\Downloads\CadastroDePessoas\CadastroDePessoas\bin\Debug\FirebirdSql.Data.FirebirdClient.pdb
+C:\Users\ALISSON JAQUES\Downloads\CadastroDePessoas\CadastroDePessoas\obj\Debug\CadastroDePessoas.csproj.AssemblyReference.cache
+C:\Users\ALISSON JAQUES\Downloads\CadastroDePessoas\CadastroDePessoas\obj\Debug\CadastroDePessoas.csproj.SuggestedBindingRedirects.cache
+C:\Users\ALISSON JAQUES\Downloads\CadastroDePessoas\CadastroDePessoas\obj\Debug\CadastroDePessoas.Form1.resources
+C:\Users\ALISSON JAQUES\Downloads\CadastroDePessoas\CadastroDePessoas\obj\Debug\CadastroDePessoas.Properties.Resources.resources
+C:\Users\ALISSON JAQUES\Downloads\CadastroDePessoas\CadastroDePessoas\obj\Debug\CadastroDePessoas.csproj.GenerateResource.cache
+C:\Users\ALISSON JAQUES\Downloads\CadastroDePessoas\CadastroDePessoas\obj\Debug\CadastroDePessoas.csproj.CoreCompileInputs.cache
+C:\Users\ALISSON JAQUES\Downloads\CadastroDePessoas\CadastroDePessoas\obj\Debug\CadastroDePessoas.csproj.CopyComplete
+C:\Users\ALISSON JAQUES\Downloads\CadastroDePessoas\CadastroDePessoas\obj\Debug\CadastroDePessoas.exe
+C:\Users\ALISSON JAQUES\Downloads\CadastroDePessoas\CadastroDePessoas\obj\Debug\CadastroDePessoas.pdb

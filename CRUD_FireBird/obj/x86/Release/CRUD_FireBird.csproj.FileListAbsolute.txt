@@ -1,0 +1,12 @@
+C:\Users\f5361091\documents\visual studio 2010\Projects\CadastroDePessoas\CadastroDePessoas\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\f5361091\documents\visual studio 2010\Projects\CadastroDePessoas\CadastroDePessoas\obj\x86\Release\CadastroDePessoas.Form1.resources
+C:\Users\f5361091\documents\visual studio 2010\Projects\CadastroDePessoas\CadastroDePessoas\obj\x86\Release\CadastroDePessoas.Properties.Resources.resources
+C:\Users\f5361091\documents\visual studio 2010\Projects\CadastroDePessoas\CadastroDePessoas\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\f5361091\documents\visual studio 2010\Projects\CadastroDePessoas\CadastroDePessoas\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\f5361091\documents\visual studio 2010\Projects\CadastroDePessoas\CadastroDePessoas\bin\Release\CadastroDePessoas.exe.config
+C:\Users\f5361091\documents\visual studio 2010\Projects\CadastroDePessoas\CadastroDePessoas\bin\Release\CadastroDePessoas.exe
+C:\Users\f5361091\documents\visual studio 2010\Projects\CadastroDePessoas\CadastroDePessoas\bin\Release\CadastroDePessoas.pdb
+C:\Users\f5361091\documents\visual studio 2010\Projects\CadastroDePessoas\CadastroDePessoas\bin\Release\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\f5361091\documents\visual studio 2010\Projects\CadastroDePessoas\CadastroDePessoas\bin\Release\FirebirdSql.Data.FirebirdClient.pdb
+C:\Users\f5361091\documents\visual studio 2010\Projects\CadastroDePessoas\CadastroDePessoas\obj\x86\Release\CadastroDePessoas.exe
+C:\Users\f5361091\documents\visual studio 2010\Projects\CadastroDePessoas\CadastroDePessoas\obj\x86\Release\CadastroDePessoas.pdb
