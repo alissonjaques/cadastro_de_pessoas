@@ -51,5 +51,10 @@ namespace CadastroDePessoas.view
         {
 
         }
+
+        private void Btn_Cancel_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
