@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace CadastroDePessoas
 {
-    public partial class Form1 : Form
+    public partial class FormCadastroDePessoas : Form
     {
-        public Form1()
+        public FormCadastroDePessoas()
         {
             InitializeComponent();
         }
@@ -19,7 +19,7 @@ namespace CadastroDePessoas
         {
             try
             {
-                dgvCientes.DataSource = AcessoFB.fb_GetDados().DefaultView;
+                dgvCientes.DataSource = Conexao.fb_GetDados().DefaultView;
             }
             catch (Exception ex)
             {
@@ -29,16 +29,15 @@ namespace CadastroDePessoas
         //
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente();
-            cliente.ID = Convert.ToInt32(txtID.Text);
-            cliente.Nome = txtNome.Text;
-            cliente.Endereco = txtEndereco.Text;
-            cliente.Telefone = txtTelefone.Text;
-            cliente.Email = txtEmail.Text;
-
             try
             {
-                AcessoFB.fb_InserirDados(cliente);
+                Pessoa pessoa = new Pessoa();
+                pessoa.ID = Convert.ToInt32(txtID.Text);
+                pessoa.Nome = txtNome.Text;
+                pessoa.Endereco = txtEndereco.Text;
+                pessoa.Telefone = txtTelefone.Text;
+                pessoa.Email = txtEmail.Text;
+                Conexao.fb_InserirDados(pessoa);
                 preencheGrid();
                 MessageBox.Show("Cliente inserido com sucesso !", "Inserir", MessageBoxButtons.OK);
             }
@@ -50,11 +49,11 @@ namespace CadastroDePessoas
         //
         private void dgvCientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Cliente cliente = new Cliente();
+            Pessoa cliente = new Pessoa();
             try
             {
                 int codigo = Convert.ToInt32(dgvCientes.Rows[e.RowIndex].Cells[0].Value);
-                cliente = AcessoFB.fb_ProcuraDados(codigo);
+                cliente = Conexao.fb_ProcuraDados(codigo);
             }
             catch (Exception ex)
             {
@@ -65,11 +64,11 @@ namespace CadastroDePessoas
         //
         private void btnProcurar_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente();
+            Pessoa cliente = new Pessoa();
             try
             {
                 int codigo = (int)Int64.Parse(txtID.Text);
-                cliente = AcessoFB.fb_ProcuraDados(codigo);
+                cliente = Conexao.fb_ProcuraDados(codigo);
             }
             catch (Exception ex)
             {
@@ -78,13 +77,13 @@ namespace CadastroDePessoas
             preencheDados(cliente);
         }
         //
-        private void preencheDados(Cliente cli)
+        private void preencheDados(Pessoa pessoa)
         {
-            txtID.Text = cli.ID.ToString();
-            txtNome.Text = cli.Nome;
-            txtEndereco.Text = cli.Endereco;
-            txtTelefone.Text = cli.Telefone;
-            txtEmail.Text = cli.Email;
+            txtID.Text = pessoa.ID.ToString();
+            txtNome.Text = pessoa.Nome;
+            txtEndereco.Text = pessoa.Endereco;
+            txtTelefone.Text = pessoa.Telefone;
+            txtEmail.Text = pessoa.Email;
         }
         //
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -106,13 +105,13 @@ namespace CadastroDePessoas
         {
             try
             {
-                Cliente cliente = new Cliente();
-                cliente.ID = Convert.ToInt32(txtID.Text);
-                cliente.Nome = txtNome.Text;
-                cliente.Endereco = txtEndereco.Text;
-                cliente.Telefone = txtTelefone.Text;
-                cliente.Email = txtEmail.Text;
-                AcessoFB.fb_AlterarDados(cliente);
+                Pessoa pessoa = new Pessoa();
+                pessoa.ID = Convert.ToInt32(txtID.Text);
+                pessoa.Nome = txtNome.Text;
+                pessoa.Endereco = txtEndereco.Text;
+                pessoa.Telefone = txtTelefone.Text;
+                pessoa.Email = txtEmail.Text;
+                Conexao.fb_AlterarDados(pessoa);
                 preencheGrid();
                 MessageBox.Show("Cliente alterado com sucesso !", "Alterar", MessageBoxButtons.OK);
             }
@@ -127,7 +126,7 @@ namespace CadastroDePessoas
             try
             {
                 int codigo = Convert.ToInt32(txtID.Text);
-                AcessoFB.fb_ExcluirDados(codigo);
+                Conexao.fb_ExcluirDados(codigo);
                 preencheGrid();
                 MessageBox.Show("Cliente excluído com sucesso !", "Alterar", MessageBoxButtons.OK);
             }
@@ -140,6 +139,11 @@ namespace CadastroDePessoas
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Dispose();  
         }
     }
 }

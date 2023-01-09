@@ -5,13 +5,13 @@ using System.Data;
 
 namespace CadastroDePessoas
 {
-    public class AcessoFB
+    public class Conexao
     {
-        private static readonly AcessoFB instanciaFireBird = new AcessoFB();
+        private static readonly Conexao instanciaFireBird = new Conexao();
 
-        private AcessoFB() { }
+        private Conexao() { }
 
-        public static AcessoFB getInstancia()
+        public static Conexao getInstancia()
         {
             return instanciaFireBird;
         }
@@ -24,13 +24,13 @@ namespace CadastroDePessoas
 
         public static DataTable fb_GetDados()
         {
-            using (FbConnection conexaoFireBird = AcessoFB.getInstancia().getConexao())
+            using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
             {
                 try
                 {
                     conexaoFireBird.Open();
 
-                    string mSQL = "Select * from Clientes";
+                    string mSQL = "Select * from Pessoas";
 
                     FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
                     FbDataAdapter da = new FbDataAdapter(cmd);
@@ -51,15 +51,15 @@ namespace CadastroDePessoas
             }
         }
 
-        public static void fb_InserirDados(Cliente cliente)
+        public static void fb_InserirDados(Pessoa pessoa)
         {
-            using (FbConnection conexaoFireBird = AcessoFB.getInstancia().getConexao())
+            using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
             {
                 try
                 {
                     conexaoFireBird.Open();
 
-                    string mSQL = "INSERT into Clientes Values(" + cliente.ID + ",'" + cliente.Nome + "','" + cliente.Endereco + "','" + cliente.Telefone + "','" + cliente.Email + "')";
+                    string mSQL = "INSERT into Pessoas Values(" + pessoa.ID + ",'" + pessoa.Nome + "','" + pessoa.Endereco + "','" + pessoa.Telefone + "','" + pessoa.Email + "')";
 
                     FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
                     cmd.ExecuteNonQuery();
@@ -76,13 +76,13 @@ namespace CadastroDePessoas
         }
         public static void fb_ExcluirDados(int id)
         {
-            using (FbConnection conexaoFireBird = AcessoFB.getInstancia().getConexao())
+            using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
             {
                 try
                 {
                     conexaoFireBird.Open();
 
-                    string mSQL = "DELETE from Clientes Where id= " + id;
+                    string mSQL = "DELETE from Pessoas Where id= " + id;
 
                     FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
                     cmd.ExecuteNonQuery();
@@ -97,29 +97,29 @@ namespace CadastroDePessoas
                 }
             }
         }
-        public static Cliente fb_ProcuraDados(int id)
+        public static Pessoa fb_ProcuraDados(int id)
         {
-            using (FbConnection conexaoFireBird = AcessoFB.getInstancia().getConexao())
+            using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
             {
                 try
                 {
                     conexaoFireBird.Open();
 
-                    string mSQL = "Select * from Clientes Where id = " + id;
+                    string mSQL = "Select * from Pessoas Where id = " + id;
 
                     FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
                     FbDataReader dr = cmd.ExecuteReader();
 
-                    Cliente cliente = new Cliente();
+                    Pessoa pessoa = new Pessoa();
                     while (dr.Read())
                     {
-                        cliente.ID = Convert.ToInt32(dr[0]);
-                        cliente.Nome = dr[1].ToString();
-                        cliente.Endereco = dr[2].ToString();
-                        cliente.Telefone = dr[3].ToString();
-                        cliente.Email = dr[4].ToString();
+                        pessoa.ID = Convert.ToInt32(dr[0]);
+                        pessoa.Nome = dr[1].ToString();
+                        pessoa.Endereco = dr[2].ToString();
+                        pessoa.Telefone = dr[3].ToString();
+                        pessoa.Email = dr[4].ToString();
                     }
-                    return cliente;
+                    return pessoa;
 
                 }
                 catch (FbException fbex)
@@ -132,15 +132,15 @@ namespace CadastroDePessoas
                 }
             }
         }
-        public static void fb_AlterarDados(Cliente cliente)
+        public static void fb_AlterarDados(Pessoa pessoa)
         {
-            using (FbConnection conexaoFireBird = AcessoFB.getInstancia().getConexao())
+            using (FbConnection conexaoFireBird = Conexao.getInstancia().getConexao())
             {
                 try
                 {
                     conexaoFireBird.Open();
 
-                    string mSQL = "Update Clientes set nome= '" + cliente.Nome + "', endereco= '" + cliente.Endereco + "', telefone = '" + cliente.Telefone + "', email= '" + cliente.Email + "'" + " Where id= " + cliente.ID;
+                    string mSQL = "Update Pessoas set nome= '" + pessoa.Nome + "', endereco= '" + pessoa.Endereco + "', telefone = '" + pessoa.Telefone + "', email= '" + pessoa.Email + "'" + " Where id= " + pessoa.ID;
 
                     FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
                     cmd.ExecuteNonQuery();

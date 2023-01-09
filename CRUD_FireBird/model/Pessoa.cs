@@ -1,7 +1,7 @@
 ﻿
 namespace CadastroDePessoas
 {
-    public class Cliente
+    public class Pessoa
     {
         public int ID { get; set; }
         public string Nome { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace CadastroDePessoas
 {
-    partial class Form1
+    partial class FormCadastroDePessoas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroDePessoas));
             this.dgvCientes = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnProcurar = new System.Windows.Forms.Button();
@@ -79,16 +80,18 @@
             this.groupBox1.Size = new System.Drawing.Size(685, 142);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Clientes";
+            this.groupBox1.Text = "Pessoas";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnProcurar
             // 
+            this.btnProcurar.Image = ((System.Drawing.Image)(resources.GetObject("btnProcurar.Image")));
+            this.btnProcurar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProcurar.Location = new System.Drawing.Point(182, 20);
             this.btnProcurar.Name = "btnProcurar";
             this.btnProcurar.Size = new System.Drawing.Size(109, 24);
             this.btnProcurar.TabIndex = 10;
-            this.btnProcurar.Text = "Pesquisar";
+            this.btnProcurar.Text = "   Pesquisar";
             this.btnProcurar.UseVisualStyleBackColor = true;
             this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
@@ -174,42 +177,51 @@
             // 
             // btnNovo
             // 
-            this.btnNovo.Location = new System.Drawing.Point(13, 422);
+            this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
+            this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNovo.Location = new System.Drawing.Point(13, 421);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(75, 35);
             this.btnNovo.TabIndex = 2;
-            this.btnNovo.Text = "Novo";
+            this.btnNovo.Text = "     Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnAltera
             // 
-            this.btnAltera.Location = new System.Drawing.Point(94, 422);
+            this.btnAltera.Image = ((System.Drawing.Image)(resources.GetObject("btnAltera.Image")));
+            this.btnAltera.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAltera.Location = new System.Drawing.Point(94, 421);
             this.btnAltera.Name = "btnAltera";
-            this.btnAltera.Size = new System.Drawing.Size(75, 35);
+            this.btnAltera.Size = new System.Drawing.Size(95, 35);
             this.btnAltera.TabIndex = 2;
-            this.btnAltera.Text = "Alterar";
+            this.btnAltera.Text = "     Alterar";
             this.btnAltera.UseVisualStyleBackColor = true;
             this.btnAltera.Click += new System.EventHandler(this.btnAltera_Click);
             // 
             // btnExclui
             // 
-            this.btnExclui.Location = new System.Drawing.Point(175, 422);
+            this.btnExclui.Image = ((System.Drawing.Image)(resources.GetObject("btnExclui.Image")));
+            this.btnExclui.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExclui.Location = new System.Drawing.Point(195, 421);
             this.btnExclui.Name = "btnExclui";
-            this.btnExclui.Size = new System.Drawing.Size(75, 35);
+            this.btnExclui.Size = new System.Drawing.Size(90, 35);
             this.btnExclui.TabIndex = 2;
-            this.btnExclui.Text = "Excluir";
+            this.btnExclui.Text = "     Excluir";
             this.btnExclui.UseVisualStyleBackColor = true;
             this.btnExclui.Click += new System.EventHandler(this.btnExclui_Click);
             // 
             // btnSair
             // 
+            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
+            this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSair.Location = new System.Drawing.Point(623, 422);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 35);
             this.btnSair.TabIndex = 2;
-            this.btnSair.Text = "Sair";
+            this.btnSair.Text = "   Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnLimpar
             // 
@@ -217,16 +229,17 @@
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 34);
             this.btnLimpar.TabIndex = 11;
-            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.Text = "   Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // Form1
+            // FormCadastroDePessoas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(710, 458);
+            this.ControlBox = false;
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnExclui);
@@ -234,9 +247,11 @@
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvCientes);
-            this.Name = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.Name = "FormCadastroDePessoas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro Clientes";
+            this.Text = "Cadastro Pessoas";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCientes)).EndInit();
             this.groupBox1.ResumeLayout(false);

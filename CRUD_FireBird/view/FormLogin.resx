@@ -117,28 +117,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="label4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Pic_Login.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
 </root>
