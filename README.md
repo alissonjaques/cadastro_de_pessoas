@@ -15,6 +15,7 @@ COMMIT;
 # Acessar a base de dados:
 
 CONNECT 'C:\Database\cadastro.fbd' USER SYSDBA PASSWORD masterkey;
+COMMIT;
 
 # Criar a tabela de pessoas;
 
